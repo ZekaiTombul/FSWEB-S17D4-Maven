@@ -52,8 +52,8 @@ class SqlIntroApplicationTests {
 	@DisplayName("Öğrenci numarası 5 ile 10 arasında olan Kız öğrencileri listeleyiniz.")
 	@Test
 	void getFindGirlsWithOgrnoTest(){
-		assertEquals(ogrenciRepository.findGirlsWithOgrno().size(), 3);
-		assertEquals(ogrenciRepository.findGirlsWithOgrno().get(0).getAd(), "Betül");
+		assertEquals(ogrenciRepository.findGirlsWithOgrno().size(), 4);
+		assertEquals(ogrenciRepository.findGirlsWithOgrno().get(0).getAd(), "Sema");
 	}
 
 	@DisplayName("Öğrencileri adına göre sıralayınız (alfabetik)")
@@ -75,15 +75,15 @@ class SqlIntroApplicationTests {
 	@DisplayName("Öğrenciler tablosundaki en genç öğrenciyi listeleyiniz.")
 	@Test
 	void findYoungestStudentTest(){
-		assertEquals(ogrenciRepository.findYoungestStudent().getAd(), "Niyazi");
-		assertEquals(ogrenciRepository.findYoungestStudent().getSoyad(), "Sevinç");
+		assertEquals(ogrenciRepository.findYoungestStudent().getAd(), "Kenan");
+		assertEquals(ogrenciRepository.findYoungestStudent().getSoyad(), "Emin");
 	}
 
 	@DisplayName("Öğrenciler tablosundaki en yaşlı öğrenciyi listeleyiniz.")
 	@Test
 	void findElderStudentTest(){
-		assertEquals(ogrenciRepository.findElderStudent().getAd(), "Kenan");
-		assertEquals(ogrenciRepository.findElderStudent().getSoyad(), "Emin");
+		assertEquals(ogrenciRepository.findElderStudent().getAd(), "Niyazi");
+		assertEquals(ogrenciRepository.findElderStudent().getSoyad(), "Sevinç");
 	}
 
 	@DisplayName("İkinci harfi E olan kitapları listeleyiniz..")
